@@ -40,6 +40,7 @@ public class UserController
         String username = login.getUsername();
         String password = login.getPassword();
 
+        //TODO implement logic to verify user credentials
         User user = userService.getUser( 0l );
 
         if ( user == null )
@@ -53,7 +54,7 @@ public class UserController
         {
             throw new ServletException( "Invalid login. Please check your name and password." );
         }
-
+        //
         jwtToken = Jwts.builder().setSubject( username ).claim( "roles", "user" ).setIssuedAt( new Date() ).signWith(
             SignatureAlgorithm.HS256, "secretkey" ).compact();
 
