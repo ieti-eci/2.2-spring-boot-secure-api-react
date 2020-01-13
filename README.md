@@ -1,4 +1,4 @@
-# spring-boot-secure-api
+# 2.2 Spring Boot Secure API
 
 **Goals**
 
